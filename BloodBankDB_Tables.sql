@@ -18,11 +18,11 @@ CREATE TABLE Donor (
 	CONSTRAINT check_weight CHECK(weight_lbs >= 110),
 	CONSTRAINT check_lifetime_donations CHECK(lifetime_donations >= 1),
 	CONSTRAINT check_donor_status CHECK
-         (donor_status = 'Bronze' AND lifetime_donations <=3 OR 
-	      donor_status = 'Silver' AND lifetime_donations > 3 AND lifetime_donations <= 6 OR
+          (donor_status = 'Bronze' AND lifetime_donations <=3 OR 
+	  donor_status = 'Silver' AND lifetime_donations > 3 AND lifetime_donations <= 6 OR
           donor_status = 'Gold' AND lifetime_donations > 6 AND lifetime_donations <= 10 OR
-		  donor_status = 'Diamond' AND lifetime_donations > 10 AND lifetime_donations <= 19 OR
-		  donor_status = 'Platinum' AND lifetime_donations >= 20),
+	  donor_status = 'Diamond' AND lifetime_donations > 10 AND lifetime_donations <= 19 OR
+	  donor_status = 'Platinum' AND lifetime_donations >= 20),
 	CONSTRAINT pk_donor_pid PRIMARY KEY(pid),
 	CONSTRAINT fk_donor_pid FOREIGN KEY(pid) REFERENCES Person(pid),
 );
@@ -90,7 +90,7 @@ CREATE TABLE Transfusion (
 	blood_pressure_systolic tinyint NOT NULL,
 	blood_pressure_diastolic tinyint NOT NULL,
 	reason char(20) NOT NULL,
-    side_effects varchar(50),
+    	side_effects varchar(50),
 	transfusion_date datetime,
 	CONSTRAINT checl_respiration_rate CHECK(respiration_rate >= 12 AND respiration_rate <= 25),
 	CONSTRAINT check_bp_systolic_transfusion CHECK(blood_pressure_systolic <= 180),
