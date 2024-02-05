@@ -1,6 +1,5 @@
 -- Queries --
 
-SELECT DISTINCT side_effects FROM Transfusion
 -- How many unique first names there are --
 SELECT COUNT(DISTINCT first_name) FROM Person;
 
