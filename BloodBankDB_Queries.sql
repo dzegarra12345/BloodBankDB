@@ -1,16 +1,5 @@
 -- Queries --
 
-SELECT * FROM Person ORDER BY LEN (pid), pid;
-SELECT * FROM Donor ORDER BY LEN (pid), pid;
-SELECT * FROM Patient ORDER BY LEN (pid), pid;
-SELECT * FROM Nurse ORDER BY LEN (pid), pid;
-SELECT * FROM Pre_Exam ORDER BY LEN (peid), peid;
-SELECT * FROM Donor ORDER BY LEN (pid), pid;
-SELECT * FROM Donation ORDER BY LEN (did), did;
-SELECT * FROM Blood_Bags ORDER BY LEN (bbid), bbid;
-SELECT * FROM Transfusion ORDER BY LEN (tid), tid;
-DELETE FROM Donation
-DROP TABLE Donation
 -- How many unique first names there are --
 SELECT COUNT(DISTINCT first_name) FROM Person;
 
